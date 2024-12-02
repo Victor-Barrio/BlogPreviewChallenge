@@ -1,0 +1,120 @@
+/* Starting the CSS code */
+* { /* Manual reset for the document */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    --yellow: #F4D04E;
+
+    font-family: 'Figtree', sans-serif;
+    background: var(--yellow);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+p {
+    font-size: clamp(14px, 2vw, 16px);
+}
+
+.card {
+    background-color: white;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+    gap: 25px;
+    width: 384px;
+    max-width: 100%;
+    height: 520px;
+    max-height: 100%;
+    border-radius: 20px;
+    box-shadow: 10px 10px rgba(0, 0, 0, 1);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+.card .stateDate {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 15px;
+}
+
+.card .stateDate .state {
+    font-weight: 800;
+    background-color: var(--yellow);
+    border-radius: 5px;
+    height: 30px;
+    width: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card .titleText {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 15px;
+}
+
+.card .titleText h1 {
+    font-size: clamp(20px, 3vw, 25px);
+    font-weight: 800;
+}
+
+.card .titleText h1:hover {
+    color: var(--yellow);
+    cursor: pointer;
+}
+
+.card .titleText p {
+    font-weight: 500;
+    color: #6B6B6B;
+}
+
+.card .author {
+    display: flex;            
+    align-items: center;    
+    gap: 10px;                
+}
+
+.card .author img {
+    width: 30px;
+    height: 30px;
+    margin: 0;
+}
+
+.card .author p {
+    font-weight: 800;
+}
+
+
+/* Attribution section */
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    margin-top: 20px;
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+/* Media queries */
+@media (max-width: 768px) { /* For mobile phones */
+    .card {
+        width: 330px;
+        height: 470px;
+    }
+}
